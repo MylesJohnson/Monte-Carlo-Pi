@@ -21,7 +21,7 @@ def animate(i):
 
     inside_count += np.sum(in_marker)
     pi = inside_count / (50 * (i + 1)) * 4
-    
+
     ax.set_title('Pi Estimate: {:.4f}'.format(pi))
     ax.scatter(*in_xy, c='g', s=15)
     ax.scatter(*out_xy, c='r', s=15)
@@ -36,4 +36,4 @@ if __name__ == "__main__":
     xy = np.random.uniform(-1, 1, (2, 50 * iterations))
 
     anim = animation.FuncAnimation(fig, animate, frames=iterations)
-    anim.save('demoanimation.gif', writer='imagemagick', fps=10)
+    anim.save('demoanimation.png', writer='imagemagick', fps=10)
